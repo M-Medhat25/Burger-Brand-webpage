@@ -1,0 +1,297 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+body{
+    margin:0;
+    padding-top: 100px;
+}
+
+
+.bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #3498DB;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.icons {
+    color: #F7DC6F;
+    text-align: right;
+    margin-top: 5px;
+}
+
+
+.icons button {
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color:#F7DC6F;
+    font-family:'Courier New', Courier, monospace ;
+    background-color: #884A39;
+    border-radius: 12px;
+    cursor:grab;
+    transition: transform 0.2s ease;
+
+}
+
+.icons button:hover{
+    color: #884A39;
+    background-color: #F7DC6F;
+    transform: translateY(-3px);
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    height: 120px; /* adjust as needed */
+    width: 180px;
+}
+
+#burgerphoto {
+    position: absolute;
+    right:0;
+    top:90px
+}
+
+.home {
+    background-color: #F7DC6F;
+    padding: 160px 40px;
+    box-sizing: border-box;
+}
+
+
+
+.text {
+    text-align: left;
+}
+
+.text h2 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-size: 110px;
+    color: #884A39; 
+    font-weight: bold;
+    margin: 10px 0;
+    
+}
+
+.menu{
+    background-color: #884A39;
+    box-sizing: border-box; 
+    padding: 60px 40px;
+}
+
+.menuText{
+    display: flex;
+    align-items: flex-start; /* aligns to top */
+    justify-content: center; /* centers horizontally */
+
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-size: 60px;
+    color: #F7DC6F;
+}
+
+.menuContent{
+    display: flex;
+    align-items: flex-start; /* aligns to top */
+    justify-content: center; /* centers horizontally */
+    gap: 40px;
+}
+
+.content{
+    background-color:#F7DC6F;
+    width: 360;
+    height: 530;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 20px;
+    color:#3498DB;
+    margin:30px;
+    transition: transform 0.2s ease;
+}
+
+.content:hover{
+    transform: scale(1.1);
+}
+.content h4 {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+
+.content  a{
+    color:#884A39;
+}
+
+.content  a:hover{
+    color:#884A39;
+}
+
+
+.toMenu{
+    display: flex;
+    align-items: flex-start; /* aligns to top */
+    justify-content: center; /* centers horizontally */
+    margin: 15px 0;
+}
+
+.viewmoreButton{
+    display: inline-block;
+    margin: 0 10px;
+    font-weight: bold;
+    color:#F7DC6F;
+    font-family:'Courier New', Courier, monospace ;
+    font-size: 30px;
+    background-color:#3498DB;
+    border-radius: 30px;
+    cursor:grab;
+    transition: transform 0.2s ease;
+}
+
+.viewmoreButton:hover{
+    color: #3498DB;
+    background-color: #F7DC6F;
+    transform: translateY(-3px);
+}
+
+.aboutus{
+    background-color:#3498DB;
+    box-sizing: border-box; 
+    padding: 60px 40px;
+    
+}
+
+
+.aboutusDetails {
+    background-color: #F7DC6F;
+    border-radius: 12px;
+    align-items: center;
+    color: #884A39;
+    max-width: 800px;       /* limits the width */
+    margin: 30px ; /* centers the block horizontally */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.aboutusDetails:hover{
+    transform: scale(1.1);
+}
+
+.aboutusDetailsforPhoto {
+    background-color: #F7DC6F;
+    border-radius: 12px;
+    align-items: center;
+    color: #884A39;
+    max-width: 800px;       /* limits the width */
+    margin: 20px 0 20px auto; /* centers the block horizontally */
+    padding: 20px;
+    text-align: center;
+}
+
+.aboutusDetailsforPhoto:hover{
+    transform: scale(1.1);
+}
+
+.aboutusDetailsforPhoto:hover{
+    transition: transform 0.2s ease;
+    transform: scale(1.05);
+}
+
+.aboutus p{
+    display: inline-block;
+    font-weight: bold;
+    color:#884A39;
+    font-family:'Courier New', Courier, monospace ;
+    font-size: 20px;
+    background-color: #F7DC6F;
+    border-radius: 12px;
+    padding: 20px;
+    
+}
+
+.aboutus h2 {
+    text-align: left;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-size: 110px;
+    color:#F7DC6F; 
+    font-weight: bold;
+    margin: 10px 0;
+    
+}
+
+#storephoto {
+    position: absolute;
+    right:10;
+    top:2000px;
+    width:520;
+    height: 320;
+}
+
+
+.contact{
+    background-color: #2E4053;
+    padding: 40px 10px;
+    box-sizing:border-box;
+    
+}
+.contact h1{
+    
+    font-size: 40px;
+    color:gainsboro;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;    
+    font-weight: bold;
+    margin-top: 0;
+
+}
+
+.contact h2{
+    font-size: 40px;
+    color:gainsboro;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 0;
+
+}
+
+.contact a {
+    margin-left: 10px; /* Adds space between each icon */
+    margin-top: -15px;
+}
+
+.left-side {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.right-side {
+    text-align: right;
+}
+
+#end{
+    margin:0;
+    padding: 20px 10px;
+    background-color: #2E4053;
+    text-align: center;
+    color:gainsboro;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 13px;
+}
+#endP{
+    margin:0;
+    padding: 20px 10px;
+    background-color:#3498DB;
+    text-align: center;
+    color:gainsboro;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 13px;
+}
