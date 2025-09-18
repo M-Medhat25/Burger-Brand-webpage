@@ -13,10 +13,8 @@ This project is a stylish, responsive landing page for a burger brand, built usi
 
 ## 📸 Preview
 
-> _If you would like to add screenshots, place your images in an `assets` folder and update the links below. For now, here are example markdown image links you can use:_
-
-![Homepage Preview](assets/homepage.png)
-![Menu Section](assets/menu.png)
+![Homepage Preview](assets/Screenshot%202025-09-18%20223226.png)
+![Menu Section](assets/Screenshot%202025-09-18%20223246.png).
 
 ## 📂 Structure
 
