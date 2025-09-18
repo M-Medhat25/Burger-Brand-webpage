@@ -294,4 +294,14 @@ body{
     color:gainsboro;
     font-family:'Courier New', Courier, monospace;
     font-size: 13px;
+
+}
+
+.contact img{
+    transition: transform 0.2s ease;
+    
+}
+.contact img:hover{
+    
+    transform: scale(1.3);
 }
