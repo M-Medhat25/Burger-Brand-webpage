@@ -18,7 +18,7 @@ body{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    
+    user-select: none
 }
 
 .icons {
@@ -249,7 +249,7 @@ body{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;    
     font-weight: bold;
     margin-top: 0;
-
+    user-select: none
 }
 
 .contact h2{
@@ -259,7 +259,7 @@ body{
     text-align: right;
     font-weight: bold;
     margin-top: 0;
-
+    user-select: none
 }
 
 .contact a {
