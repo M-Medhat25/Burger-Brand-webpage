@@ -1,1 +1,2 @@
 To learn how to pull from remote repo
+This is from me while learning Git from Osama Elzero
