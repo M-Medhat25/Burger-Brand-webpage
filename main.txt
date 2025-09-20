@@ -1,5 +1,1 @@
-<<<<<<< Updated upstream
-stash for third time part 2
-=======
-stash second time part2
->>>>>>> Stashed changes
+try stash and branching
