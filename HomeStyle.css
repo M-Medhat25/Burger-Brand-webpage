@@ -1,270 +1,321 @@
+/* ========================================
+   CSS Variables
+   ======================================== */
+:root {
+    --primary-color: #3498DB;
+    --secondary-color: #884A39;
+    --accent-color: #F7DC6F;
+    --dark-color: #2E4053;
+    --text-light: gainsboro;
+    --transition-speed: 0.2s;
+}
+
+/* ========================================
+   Base Styles
+   ======================================== */
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-
-body{
-    margin:0;
+body {
+    margin: 0;
     padding-top: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
+/* ========================================
+   Navigation Bar
+   ======================================== */
 .bar {
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background-color: #3498DB;
+    background-color: var(--primary-color);
     padding: 10px 20px;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    user-select: none
+    user-select: none;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .icons {
-    color: #F7DC6F;
+    color: var(--accent-color);
     text-align: right;
     margin-top: 5px;
 }
 
-
 .icons button {
     display: inline-block;
     margin: 0 10px;
+    padding: 10px 20px;
     font-weight: bold;
-    font-size: 20px;
-    color:#F7DC6F;
-    font-family:'Courier New', Courier, monospace ;
-    background-color: #884A39;
+    font-size: 18px;
+    color: var(--accent-color);
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--secondary-color);
+    border: none;
     border-radius: 12px;
-    cursor:grab;
-    transition: transform 0.2s ease;
-
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
 }
 
-.icons button:hover{
-    color: #884A39;
-    background-color: #F7DC6F;
+.icons button:hover {
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
     transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
     position: absolute;
     left: 20px;
     top: 10px;
-    height: 120px; /* adjust as needed */
+    height: 120px;
     width: 180px;
+    object-fit: contain;
 }
 
 #burgerphoto {
     position: absolute;
-    right:0;
-    top:90px
+    right: 0;
+    top: 90px;
 }
 
+/* ========================================
+   Home Section
+   ======================================== */
 .home {
-    background-color: #F7DC6F;
+    background-color: var(--accent-color);
     padding: 160px 40px;
-    box-sizing: border-box;
+    min-height: 400px;
 }
-
-
 
 .text {
     text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .text h2 {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-    font-size: 110px;
-    color: #884A39; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: clamp(60px, 10vw, 110px);
+    color: var(--secondary-color);
     font-weight: bold;
     margin: 10px 0;
-    
+    line-height: 1.2;
 }
 
-.menu{
-    background-color: #884A39;
-    box-sizing: border-box; 
+/* ========================================
+   Menu Section
+   ======================================== */
+.menu {
+    background-color: var(--secondary-color);
     padding: 60px 40px;
 }
 
-.menuText{
+.menuText {
     display: flex;
-    align-items: flex-start; /* aligns to top */
-    justify-content: center; /* centers horizontally */
-
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-    font-size: 60px;
-    color: #F7DC6F;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: clamp(40px, 6vw, 60px);
+    color: var(--accent-color);
+    margin-bottom: 40px;
 }
 
-.menuContent{
+.menuContent {
     display: flex;
-    align-items: flex-start; /* aligns to top */
-    justify-content: center; /* centers horizontally */
+    align-items: flex-start;
+    justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.content{
-    background-color:#F7DC6F;
-    width: 360;
-    height: 530;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+.content {
+    background-color: var(--accent-color);
+    width: 360px;
+    height: 530px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
-    color:#3498DB;
-    margin:30px;
-    transition: transform 0.2s ease;
+    color: var(--primary-color);
+    margin: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.content:hover{
-    transform: scale(1.1);
+.content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .content h4 {
     margin: 20px 0;
     font-size: 24px;
+    color: var(--secondary-color);
 }
 
-
-.content  a{
-    color:#884A39;
+.content a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color var(--transition-speed) ease;
 }
 
-.content  a:hover{
-    color:#884A39;
+.content a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
-
-
-.toMenu{
+.toMenu {
     display: flex;
-    align-items: flex-start; /* aligns to top */
-    justify-content: center; /* centers horizontally */
-    margin: 15px 0;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 15px;
 }
 
-.viewmoreButton{
+.viewmoreButton {
     display: inline-block;
     margin: 0 10px;
+    padding: 15px 40px;
     font-weight: bold;
-    color:#F7DC6F;
-    font-family:'Courier New', Courier, monospace ;
-    font-size: 30px;
-    background-color:#3498DB;
+    color: var(--accent-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    background-color: var(--primary-color);
+    border: none;
     border-radius: 30px;
-    cursor:grab;
-    transition: transform 0.2s ease;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    text-decoration: none;
 }
 
-.viewmoreButton:hover{
-    color: #3498DB;
-    background-color: #F7DC6F;
+.viewmoreButton:hover {
+    color: var(--primary-color);
+    background-color: var(--accent-color);
     transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.aboutus{
-    background-color:#3498DB;
-    box-sizing: border-box; 
+/* ========================================
+   About Us Section
+   ======================================== */
+.aboutus {
+    background-color: var(--primary-color);
     padding: 60px 40px;
-    
 }
-
 
 .aboutusDetails {
-    background-color: #F7DC6F;
+    background-color: var(--accent-color);
     border-radius: 12px;
-    align-items: center;
-    color: #884A39;
-    max-width: 800px;       /* limits the width */
-    margin: 30px ; /* centers the block horizontally */
-    padding: 20px;
+    color: var(--secondary-color);
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
     text-align: center;
-    transition: transform 0.2s ease;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.aboutusDetails:hover{
-    transform: scale(1.1);
+.aboutusDetails:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .aboutusDetailsforPhoto {
-    background-color: #F7DC6F;
+    background-color: var(--accent-color);
     border-radius: 12px;
-    align-items: center;
-    color: #884A39;
-    max-width: 800px;       /* limits the width */
-    margin: 20px 0 20px auto; /* centers the block horizontally */
-    padding: 20px;
+    color: var(--secondary-color);
+    max-width: 800px;
+    margin: 20px 0 20px auto;
+    padding: 30px;
     text-align: center;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.aboutusDetailsforPhoto:hover{
-    transform: scale(1.1);
+.aboutusDetailsforPhoto:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.aboutusDetailsforPhoto:hover{
-    transition: transform 0.2s ease;
-    transform: scale(1.05);
-}
-
-.aboutus p{
+.aboutus p {
     display: inline-block;
     font-weight: bold;
-    color:#884A39;
-    font-family:'Courier New', Courier, monospace ;
-    font-size: 20px;
-    background-color: #F7DC6F;
+    color: var(--secondary-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: var(--accent-color);
     border-radius: 12px;
     padding: 20px;
-    
 }
 
 .aboutus h2 {
     text-align: left;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-    font-size: 110px;
-    color:#F7DC6F; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: clamp(60px, 10vw, 110px);
+    color: var(--accent-color);
     font-weight: bold;
-    margin: 10px 0;
-    
+    margin: 10px 0 30px;
+    line-height: 1.2;
 }
 
 #storephoto {
     position: absolute;
-    right:10;
-    top:2000px;
-    width:520;
-    height: 320;
+    right: 10px;
+    top: 2000px;
+    width: 520px;
+    height: 320px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+/* ========================================
+   Contact Section
+   ======================================== */
+.contact {
+    background-color: var(--dark-color);
+    padding: 40px 20px;
 }
 
-
-.contact{
-    background-color: #2E4053;
-    padding: 40px 10px;
-    box-sizing:border-box;
-    
-}
-.contact h1{
-    
-    font-size: 40px;
-    color:gainsboro;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;    
+.contact h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    color: var(--text-light);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bold;
     margin-top: 0;
-    user-select: none
+    user-select: none;
 }
 
-.contact h2{
-    font-size: 40px;
-    color:gainsboro;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+.contact h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    color: var(--text-light);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: right;
     font-weight: bold;
     margin-top: 0;
-    user-select: none
+    user-select: none;
 }
 
 .contact a {
-    margin-left: 10px; /* Adds space between each icon */
+    margin-left: 10px;
     margin-top: -15px;
+    display: inline-block;
+}
+
+.contact img {
+    transition: transform var(--transition-speed) ease;
+}
+
+.contact img:hover {
+    transform: scale(1.2);
 }
 
 .left-side {
@@ -277,31 +328,25 @@ body{
     text-align: right;
 }
 
-#end{
-    margin:0;
+/* ========================================
+   Footer
+   ======================================== */
+#end {
+    margin: 0;
     padding: 20px 10px;
-    background-color: #2E4053;
+    background-color: var(--dark-color);
     text-align: center;
-    color:gainsboro;
-    font-family:'Courier New', Courier, monospace;
+    color: var(--text-light);
+    font-family: 'Courier New', Courier, monospace;
     font-size: 13px;
 }
-#endP{
-    margin:0;
+
+#endP {
+    margin: 0;
     padding: 20px 10px;
-    background-color:#3498DB;
+    background-color: var(--primary-color);
     text-align: center;
-    color:gainsboro;
-    font-family:'Courier New', Courier, monospace;
+    color: var(--text-light);
+    font-family: 'Courier New', Courier, monospace;
     font-size: 13px;
-
-}
-
-.contact img{
-    transition: transform 0.2s ease;
-    
-}
-.contact img:hover{
-    
-    transform: scale(1.3);
 }
